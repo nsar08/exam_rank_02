@@ -6,7 +6,7 @@
 /*   By: nsar <marvin@42lausanne.ch>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 14:18:11 by nsar              #+#    #+#             */
-/*   Updated: 2022/01/26 16:15:17 by nsar             ###   ########.fr       */
+/*   Updated: 2022/01/27 12:03:08 by nsar             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,15 @@ int ft_intlen(int nb, char c)
 	}
 
 	if (c == 'd')
+	{
+		while (number)
+		{
+			number /= 10;
+			i++;
+		}
+		return (i + neg);
+	}
+	if (c == 'x')
 	{
 		while (number)
 		{
@@ -205,6 +214,8 @@ int ft_printf(const char *format, ...)
 
 int main()
 {
-	int res= ft_printf("Coucou %f\n", 5.5);
-	int res2 = printf("Coucou %f\n", 5.5);
+	int res= ft_printf("Coucou %d\n", 10);
+	int res2 = printf("Coucou %d\n", 10);
+
+	printf("\nres = %d\nres2 = %d\n", res, res2);
 }
