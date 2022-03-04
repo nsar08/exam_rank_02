@@ -6,7 +6,7 @@
 /*   By: nsar <marvin@42lausanne.ch>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 14:18:11 by nsar              #+#    #+#             */
-/*   Updated: 2022/01/27 12:03:08 by nsar             ###   ########.fr       */
+/*   Updated: 2022/02/03 15:41:07 by nsar             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -214,8 +214,8 @@ int ft_printf(const char *format, ...)
 
 int main()
 {
-	int res= ft_printf("Coucou %d\n", 10);
-	int res2 = printf("Coucou %d\n", 10);
+	int res= ft_printf("%f", 1.5);
+	int res2 = printf("%f", 1.5);
 
 	printf("\nres = %d\nres2 = %d\n", res, res2);
 }
